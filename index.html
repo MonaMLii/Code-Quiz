@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=outline">
+</head>
+
+<body>
+    
+    <!-- <div class="score"><a href="#">View Highscores</a></div> -->
+    <button id="high-score" class="btn">View Scores</button>
+        <div id="myModal2" class="modal2">
+            <!-- Modal content -->
+            <div class="modal-content2">
+              <div class="modal-header2">
+                <span class="close2">&times;</span>
+                <h2>High Score</h2>
+              </div>
+              <div class="modal-body2">
+                <p> This is a high score</p>
+                <p>amazing</p>
+              </div>
+            </div>
+          </div>
+
+
+    <div class="timer">Time - <span id="time">0</span></div>
+
+    <!-- first page -->
+
+    <div id="start-screen" class="start">
+        <h1>Code Quiz </h1>
+    
+    <div id="buttons">
+        <button id="start" class="btn">Start Game</button>
+        <button id="instruction" class="btn">Instruction</button>
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Instruction!</h2>
+              </div>
+              <div class="modal-body">
+                <p> This is a typical coding assessment includes both multiple-choice questions and interactive coding challenges</p>
+                <p>the time will be deducted by 15 seconds each question you get wrong answer!</p>
+              </div>
+            </div>
+          </div>
+         
+    </div> 
+
+    </div>
+    
+    
+
+
+    <!-- Questions -->
+
+    <div id="questions" class="hide">
+        <h2 id="question-is"></h2>
+        <div id="choices" class="choices">
+          <ol>
+            <li><button id="choice-0" class="choice-btn" onclick="checkAnswer(0)" ></button></li>
+            <li><button id="choice-1" class="choice-btn" onclick="checkAnswer(1)"></button></li>
+            <li><button id="choice-2" class="choice-btn" onclick="checkAnswer(2)"></button></li>
+            <li><button id="choice-3" class="choice-btn" onclick="checkAnswer(3)"></button></li>
+          </ol>
+        </div>
+    </div>
+
+    <div id="good-feedback" class="hide">✅</div>
+    <div id="bad-feedback" class="hide">❌</div>
+
+    <!-- result page -->
+
+    <div id="result" class="hide">
+        <p>You did it!</p>
+        <p>Your Score is <span id="end-score"></span>.</p>
+
+        <p>
+            Enter your initial: <input type="text" id="initial" maxlength="2">
+            <button id="submit">Submit</button>
+        </p>
+    </div>
+    
+    
+
+<script src="assets/JS/questions.js"></script>
+<script src="assets/JS/script.js"></script>
+</body>
+</html>
