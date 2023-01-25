@@ -13,7 +13,7 @@ var startBtn = document.querySelector("#start");
 var instructionEl = document.querySelector("#instruction");
 var submitBtn = document.querySelector("#submit");
 var initialEl = document.querySelector("#initial");
-var highScoreEl = document.querySelector("#high-score");
+var showScoreEl = document.querySelector("#show-score");
 var currentScore = 0;
 
 console.log(resultEl);
@@ -25,7 +25,7 @@ var timerStart;
 
 
 
-// popup box from Codepen + adjust by myself
+// popup box instruction from Codepen + adjust by myself
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -53,31 +53,31 @@ window.onclick = function(event) {
   }
 }
 
-// // popup box for high scorefrom Codepen + adjust by myself
+// // // popup box for high scorefrom Codepen + adjust by myself
 
 // Get the modal
-var modal = document.getElementById("myModal2");
+var modal2 = document.getElementById("myModal2");
 
 // Get the button that opens the modal
-var btn = document.getElementById("high-score");
+var btn2 = document.getElementById("show-score");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close2")[0];
+var span2 = document.getElementsByClassName("close2")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+btn2.onclick = function() {
+  modal2.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+span2.onclick = function() {
+  modal2.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == modal2) {
+    modal2.style.display = "none";
   }
 }
 
@@ -180,11 +180,28 @@ function getHighScore() {
   if (initial === "") {
     return;
   } 
-  var viewScore 
+  
 }
 
-submitBtn.addEventListener("click", getHighScore);
 
+// var storeScore = [
+//   {
+//      person: "",
+//      score: ""
+//   }
+// ]
+
+// function showScoreEl(score) {
+//   localStorage.setItem("currentScore", score);
+//   localStorage.setItem("getHighScore", person); 
+// }
+
+// var getViewScore = localStorage.getItem(showScoreEl);
+
+// function viewScore() {
+//   if (document.querySelector(h3) = "");
+//     viewScore();
+// } 
 
 // store score
 // function storeScore(score) {
