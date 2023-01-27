@@ -15,15 +15,28 @@ var submitBtn = document.querySelector("#submit");
 var initialEl = document.querySelector("#initial");
 var showScoreEl = document.querySelector("#show-score");
 var currentScore = 0;
-
+var ulEl = document.getElementById("storeHere");
 console.log(resultEl);
 
 // quiz time
 var currentQuestion = 0;
 var time = questions.length * 15;
 var timerStart;
+var storeScore;
 
 
+function getStoredScore() {
+  storeScore = localStorage.getItem("storeScore") || [];
+  console.log(storeScore.length);
+  
+  for (var i = 0; i < storeScore.length; i++) {
+    var liTag = document.createElement("li");
+    liTag.textContent = storeScore[i].initial + " - " + storeScore[i].score;
+
+    ulEl.appendChild(liTag);
+  }
+}
+getStoredScore();
 
 // popup box instruction from Codepen + adjust by myself
 
@@ -174,7 +187,7 @@ function lastPage() {
   endScore.textContent = currentScore;
 }
 
-function showScoreEl(initial) {
+function showScore(initial) {
   var singleScore = {
      initial,
      score: currentScore
@@ -183,11 +196,11 @@ function showScoreEl(initial) {
    storeScore.push(singleScore)
  
    var liTag = document.createElement("li");
-   liTag.textContent = storeScore.initial + " - " + storeScore.score;
+   liTag.textContent = singleScore.initial + " - " + singleScore.score;
  
    localStorage.setItem("storeScore", JSON.stringify(storeScore));
  
-   var ulEl = document.getElementById("storeHere");
+   
    ulEl.appendChild(liTag);
 }
 
@@ -197,13 +210,11 @@ function submitScore() {
   if (initial === "") {
     return;
   } 
-  showScoreEl(initial);
+  showScore(initial);
 }
 submitBtn.addEventListener("click", submitScore);
 
   // addEventListener('reset', () => {});
-
-var storeScore = [];
 
 
 
