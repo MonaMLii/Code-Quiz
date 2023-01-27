@@ -214,6 +214,8 @@ function submitScore() {
 }
 submitBtn.addEventListener("click", submitScore);
 
+
+
   // addEventListener('reset', () => {});
 
 
