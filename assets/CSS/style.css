@@ -326,5 +326,39 @@ ol {
   -webkit-font-smoothing: antialiased;
   margin-top: 5%;
   margin-bottom: 8%;
-  
+}
+
+#submit {
+  font-family: 'Muli', sans-serif;
+  font-size: 18px;
+  letter-spacing: -.003em;
+  border: none;
+  background-color: rgb(182, 53, 139);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  line-height: 3px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color:rgb(101, 101, 101);
+}
+
+#initial {
+  color: #050505;
+  font-family: 'Muli', sans-serif;
+  font-size: 20px;
+  letter-spacing: -.003em;
+  background-color: rgb(254, 254, 254);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+  border: dotted;
+  text-align: center;
+
+
 }

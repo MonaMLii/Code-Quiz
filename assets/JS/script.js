@@ -174,34 +174,89 @@ function lastPage() {
   endScore.textContent = currentScore;
 }
 
-function getHighScore() {
+function showScoreEl(initial) {
+  var singleScore = {
+     initial,
+     score: currentScore
+  }
+ 
+   storeScore.push(singleScore)
+ 
+   var liTag = document.createElement("li");
+   liTag.textContent = storeScore.initial + " - " + storeScore.score;
+ 
+   localStorage.setItem("storeScore", JSON.stringify(storeScore));
+ 
+   var ulEl = document.getElementById("storeHere");
+   ulEl.appendChild(liTag);
+}
+
+function submitScore() {
   var initial = initialEl.value;
 
   if (initial === "") {
     return;
   } 
-  
+  showScoreEl(initial);
 }
+submitBtn.addEventListener("click", submitScore);
+
+  // addEventListener('reset', () => {});
+
+var storeScore = [];
 
 
-// var storeScore = [
-//   {
-//      person: "",
-//      score: ""
-//   }
-// ]
 
-// function showScoreEl(score) {
+
+
+
+
+
+
 //   localStorage.setItem("currentScore", score);
-//   localStorage.setItem("getHighScore", person); 
+//   localStorage.setItem("getHighScore", initial);
+
+// var getCurrentScore = JSON.parse(window.localStorage.getItem("currentScore"));
+// var getHighScore = JSON.parse(window.localStorage.getItem("getHighScore"));
+
+
+
+
+
+
+// function printHighscores() {
+//   // either get scores from localstorage or set to empty array
+//   var toStoreScores = JSON.parse(window.localStorage.getItem("toStoreScores"));
+
+//   // sort highscores by score property in descending order
+//   toStoreScores.sort(function(a, b) {
+//     return b.score - a.score;
+//   });
+
+//   toStoreScores.forEach(function(score) {
+//     // create list tag for each score
+    
+
+//     // display on page
+    
+//   });
 // }
 
-// var getViewScore = localStorage.getItem(showScoreEl);
+// function clearHighscores() {
+//   window.localStorage.removeItem("toStoreScores");
+//   window.location.reload();
+// }
 
-// function viewScore() {
-//   if (document.querySelector(h3) = "");
-//     viewScore();
-// } 
+// document.getElementById("clear").onclick = clearHighscores;
+
+// // run function when page loads
+// printHighscores();
+
+
+
+
+
+
 
 // store score
 // function storeScore(score) {
