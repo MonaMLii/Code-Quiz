@@ -364,3 +364,7 @@ ol {
 #start {
   text-align: center;
 }
+
+#storeHere {
+  list-style: none;
+}

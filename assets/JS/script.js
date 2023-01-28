@@ -26,7 +26,7 @@ var storeScore;
 
 
 function getStoredScore() {
-  storeScore = localStorage.getItem("storeScore") || [];
+  storeScore = JSON.parse(localStorage.getItem("storeScore")) || [];
   console.log(storeScore.length);
   
   for (var i = 0; i < storeScore.length; i++) {
@@ -37,6 +37,7 @@ function getStoredScore() {
   }
 }
 getStoredScore();
+
 
 // popup box instruction from Codepen + adjust by myself
 
