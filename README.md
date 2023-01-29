@@ -30,6 +30,12 @@ when I load the code quiz page.
 
 https://monamlii.github.io/Code-Quiz/
 
+
+
+![Code Quiz](https://user-images.githubusercontent.com/89316044/215349703-1e4d9201-c209-488b-ac8f-25ed2778a0db.gif)
+
+
+
 <img width="1294" alt="Screenshot 2023-01-24 at 10 49 22 PM" src="https://user-images.githubusercontent.com/89316044/214499249-98077f5b-bde9-4aa8-a564-56efd1a8484b.png">
 
 
