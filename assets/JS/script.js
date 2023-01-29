@@ -213,7 +213,9 @@ function submitScore() {
   } 
   showScore(initial);
 }
+
 submitBtn.addEventListener("click", submitScore);
 
-renderQuestion();
+startBtn.addEventListener("click", renderQuestion());
+
 
